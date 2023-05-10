@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Калькулятор зарплаты</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Калькулятор расчета зарплаты</h1>
+      <div class="form">
+        <input type="number" id="days" placeholder="Часы" />
+        <input type="number" id="hours" placeholder="Дни" />
+        <input type="number" id="non_working_time" placeholder="Понадурочно" />
+        <input type="number" id="night_work" placeholder="Ночные смены" />
+        <input type="number" id="hourly_rate" placeholder="Часовая ставка" />
+
+        <!-- Если есть только ЗП(нар) -->
+        <input type="number" id="mainSalary" placeholder="ЗП(нар)" />
+      </div>
+      <div class="action-buttons">
+        <button class="calcButton">Расчитать</button>
+        <button class="clearButton">Очистить</button>
+        <label class="container"
+          >ЗП(нар)
+          <input id="isKnownOnlyMainSalary" type="checkbox" checked="checked" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+
+      <div class="info">
+        <ul class="salary">
+          <li class="pdfo">ПДФО:</li>
+          <li class="millitary">Военный сбор:</li>
+          <li class="u">Удержание:</li>
+          <li class="total">Выплата:</li>
+        </ul>
+      </div>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
